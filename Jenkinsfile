@@ -5,7 +5,7 @@ pipeline {
             steps { checkout scm }
         }
         stage('Run Application') {
-            steps { bat 'py app.py' }
+            steps { bat '"C:\\Users\\RAHUL\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" app.py' }
         }
         stage('Build Docker Image') {
             steps { bat 'docker build -t devops-practical-3 .' }
