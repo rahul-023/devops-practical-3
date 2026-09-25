@@ -5,7 +5,7 @@ pipeline {
             steps { checkout scm }
         }
         stage('Run Application') {
-            steps { bat 'python app.py' }
+            steps { bat 'py app.py' }
         }
         stage('Build Docker Image') {
             steps { bat 'docker build -t devops-practical-3 .' }
